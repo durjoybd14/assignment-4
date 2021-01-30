@@ -7,8 +7,8 @@ document.getElementById("bookingButton").addEventListener("click", function () {
 
 //count change handle and call totalCalculate function
 function handleCountChange(isIncrease, id) {
-    let countInput = document.getElementById(id).value;
-    let count = parseInt(countInput);
+    const countInput = document.getElementById(id).value;
+    const count = parseInt(countInput);
     let newCount = count;
 
     if (isIncrease == true) {
@@ -26,16 +26,16 @@ function handleCountChange(isIncrease, id) {
 
 // total Calculate function
 function totalCalculate() {
-    let newFirstCount = getInputValue("firstClassInput");
-    let newEconomyCount = getInputValue("economyClassInput");
+    const newFirstCount = getInputValue("firstClassInput");
+    const newEconomyCount = getInputValue("economyClassInput");
 
-    let subtotal = newFirstCount * 150 + newEconomyCount * 100;
+    const subtotal = newFirstCount * 150 + newEconomyCount * 100;
     document.getElementById("subtotal").innerText = "$" + subtotal;
 
-    let tax = subtotal * .1;
+    const tax = subtotal * .1;
     document.getElementById("tax").innerText = "$" + tax;
 
-    let total = subtotal + tax;
+    const total = subtotal + tax;
     document.getElementById("total").innerText = "$" + total;
 }
 
